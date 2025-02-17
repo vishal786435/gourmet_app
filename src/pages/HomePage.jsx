@@ -1,7 +1,8 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import heroImage from "../assets/Hero.jpg"; // Ensure correct file path
+import heroImage from "../assets/hero.jpg"; // Ensure correct file path
 
 const HomePage = () => {
     return (
