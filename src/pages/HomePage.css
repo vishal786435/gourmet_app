@@ -1,0 +1,196 @@
+/* Make sure the entire page is centered */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding-top: 80px; /* Prevents navbar from being overlapped */
+}
+
+/* Header (renamed from .navbar) */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #d35400;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; /* space out logo & nav links */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000; /* Ensures Header stays on top */
+}
+
+/* Optional styling for the .logo */
+.logo {
+  margin-left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* .nav-menu to space out the links */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+/* Renamed from .nav-button → .nav-link */
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hero Section: Full Centering */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+/* The hero image behind the text */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill entire area, may crop if narrower/taller */
+  z-index: 0;
+}
+
+/* Hero Overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Centered Buttons in the hero */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button Styles */
+.btn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Primary Button */
+.primary-btn {
+  background-color: #d35400;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #b03900;
+}
+
+/* Secondary Button */
+.secondary-btn {
+  background-color: white;
+  color: #d35400;
+  border: 2px solid #d35400;
+}
+
+.secondary-btn:hover {
+  background-color: #f8f8f8;
+}
+
+/* Info Section */
+.info-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 20px 30px;
+  margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.info-section {
+  animation: fadeIn 1s ease-in-out;
+}

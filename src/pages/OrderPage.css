@@ -1,0 +1,114 @@
+/* Order Page Container */
+.order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* Hero Section (if you still use it) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Order List */
+.order-list {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Example styling for items in the order list */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.food-name {
+  color: #333;
+}
+
+.food-price {
+  color: #27ae60;
+}
+
+/* Footer (if used on the Order page) */
+.footer {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+/* NEW: Button Group for Clear & Checkout */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Clear Order & Checkout Buttons share styling */
+.clear-order-btn,
+.checkout-btn {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1; /* So they take equal space in the button group */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-order-btn:hover,
+.checkout-btn:hover {
+  background-color: #1e8449; /* Darker hover color */
+  transform: scale(1.05);
+}
