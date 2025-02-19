@@ -20,3 +20,7 @@ root.render(
     </CartProvider>
   </React.StrictMode>
 );
+
+const connectDB = require("./config/db.js");
+
+connectDB();
