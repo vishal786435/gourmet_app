@@ -5,7 +5,7 @@ import { CartProvider } from "./context/CartContext"; // Import CartProvider
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import OrderPage from "./pages/OrderPage";
-import connectDB from "./config/db.js";
+import connectDB from "./config/db";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
