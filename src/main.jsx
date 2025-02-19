@@ -5,6 +5,7 @@ import { CartProvider } from "./context/CartContext"; // Import CartProvider
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import OrderPage from "./pages/OrderPage";
+import db from "../config/db";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,3 +21,7 @@ root.render(
     </CartProvider>
   </React.StrictMode>
 );
+
+
+
+db.connectDB();
