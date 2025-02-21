@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import OrderPage from "./pages/OrderPage";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -20,3 +21,4 @@ root.render(
     </CartProvider>
   </React.StrictMode>
 );
+
