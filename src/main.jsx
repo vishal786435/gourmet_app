@@ -22,6 +22,3 @@ root.render(
   </React.StrictMode>
 );
 
-
-
-connectDB();
