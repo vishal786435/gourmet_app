@@ -8,11 +8,23 @@ const handler = async (event) => {
     try {
         const database = (await clientPromise).db(process.env.MONGODB_DATABASE || "gourmet2go");
         const collection = database.collection(process.env.MONGODB_COLLECTION || "items");
-        console.log(collection);
-        
-    } catch (error) {
-        return { statusCode: 500, body: error.toString() }
-    }
-}
 
-module.exports = { handler }
+        
+        const items = await collection.find({}).toArray();
+
+        
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ items })  
+        };
+
+    } catch (error) {
+        console.error(error);  
+        return { 
+            statusCode: 500, 
+            body: JSON.stringify({ error: 'An error occurred while connecting to MongoDB', details: error.toString() }) 
+        };
+    }
+};
+
+module.exports = { handler };
