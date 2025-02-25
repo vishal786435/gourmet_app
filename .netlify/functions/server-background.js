@@ -12,19 +12,22 @@ const handler = async (event) => {
         
         const items = await collection.find({}).toArray();
 
-        
         return {
             statusCode: 200,
-            body: JSON.stringify({ items })  
+            headers: { "Content-Type": "application/json" }, 
+            body: JSON.stringify({ items })
         };
 
     } catch (error) {
-        console.error(error);  
+        console.error("MongoDB Error:", error);  
+        
         return { 
             statusCode: 500, 
-            body: JSON.stringify({ error: 'An error occurred while connecting to MongoDB', details: error.toString() }) 
+            headers: { "Content-Type": "application/json" }, 
+            body: JSON.stringify({ error: 'MongoDB connection failed', details: error.toString() }) 
         };
     }
 };
 
 module.exports = { handler };
+
