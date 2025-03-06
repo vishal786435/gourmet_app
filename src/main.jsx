@@ -3,13 +3,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext"; // Import CartProvider
 
-// REMOVE HomePage import
-// import HomePage from "./pages/HomePage";
-import MenuPage from "./pages/MenuPage";
-import OrderPage from "./pages/OrderPage";
+
+import MenuPage from "./pages/MenuPage.jsx";
+import OrderPage from "./pages/OrderPage.jsx";
 
 // NEW: Import or create a LoginPage
-import LoginPage from "./pages/LoginPage"; // We'll create a placeholder
+import LoginPage from "./pages/LoginPage.jsx"; // We'll create a placeholder
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
