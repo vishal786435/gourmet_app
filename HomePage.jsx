@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import heroImage from "../assets/Hero.jpg"; // Ensure correct file path
+import heroImage from "../assets/Hero.jpg"; 
 
 const HomePage = () => {
   return (
     <div className="homepage">
-      {/* Header */}
+   
       <header className="header">
         <div className="logo">Gourmet 2 Go</div>
         <nav className="nav-menu">
@@ -16,13 +16,12 @@ const HomePage = () => {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      {/* Commented out the inline style for backgroundImage: */}
+     
       <section 
         className="hero" 
-        // style={{ backgroundImage: `url(${heroImage})` }} 
+       
       >
-        {/* Inserted an <img> for the hero background */}
+     
         <img src={heroImage} alt="hero" className="hero-img" />
 
         <div className="overlay"></div>
@@ -35,16 +34,16 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Info Section */}
+  
       <section className="info-section">
         <h2>Why Choose Gourmet 2 Go?</h2>
         <p>We provide freshly prepared gourmet meals, delivered fast and easy.</p>
       </section>
 
-      {/* Footer */}
+
       <footer className="footer">
-        <p>© 2023 Gourmet 2 Go. All rights reserved.</p>
-      </footer>
+      <p>© {currentYear} Gourmet 2 Go. All rights reserved.</p>
+    </footer>
     </div>
   );
 };
