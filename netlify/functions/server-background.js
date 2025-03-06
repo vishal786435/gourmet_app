@@ -4,14 +4,14 @@ const mongoClient = new MongoClient(process.env.MONGODB_URI || "mongodb+srv://ad
 
 const clientPromise = mongoClient.connect();
 
-const handler = async (event) => {
+const handler =  (event) => {
     console.log("hello");
     try {
-        const database = (await clientPromise).db(process.env.MONGODB_DATABASE || "gourmet2go");
+        const database = (clientPromise).db(process.env.MONGODB_DATABASE || "gourmet2go");
         const collection = database.collection(process.env.MONGODB_COLLECTION || "items");
 
         
-        const items = await collection.find({}).toArray();
+        const items = collection.find({}).toArray();
 
         return {
             statusCode: 200,
